@@ -15,7 +15,7 @@ public class Coupon {
 	private Integer id;
 	private String code;
 	private BigDecimal discount;
-	@Column(name = "exp_date")
+	@Column(name = "ext_date")
 	private String expDate;
 
 	public Integer getId() {
@@ -48,6 +48,11 @@ public class Coupon {
 
 	public void setExpDate(String expDate) {
 		this.expDate = expDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Coupon [id=" + id + ", code=" + code + ", discount=" + discount + ", expDate=" + expDate + "]";
 	}
 
 }

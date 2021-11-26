@@ -23,7 +23,6 @@ import com.zaxxer.hikari.HikariDataSource;
 @EnableTransactionManagement
 @EnableJpaRepositories(entityManagerFactoryRef = "couponEntityManagerFactory", transactionManagerRef = "couponTransactionManager", basePackages = {
 		"com.multipledb.coupon" })
-
 public class CouponDataSourceConfiguration {
 
 	@Primary
@@ -51,4 +50,5 @@ public class CouponDataSourceConfiguration {
 			@Qualifier("couponEntityManagerFactory") EntityManagerFactory couponEntityManagerFactory) {
 		return new JpaTransactionManager(couponEntityManagerFactory);
 	}
+
 }

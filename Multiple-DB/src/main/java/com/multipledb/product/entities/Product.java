@@ -60,4 +60,9 @@ public class Product {
 		this.cuponCode = cuponCode;
 	}
 
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price + ", cuponCode=" + cuponCode + "]";
+	}
+
 }
